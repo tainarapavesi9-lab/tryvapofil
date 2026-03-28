@@ -291,6 +291,23 @@
         .final-cta-box{padding:52px 48px}
         .cta-primary{width:auto}
     }
+
+    /* MOBILE PRODUCT IMAGE REPOSITIONING ONLY */
+    @media (max-width: 767px) {
+        .hero-inner {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        .hero-text {
+            display: contents; /* Makes children siblings of hero-img-wrap for flex ordering */
+        }
+        .eyebrow { order: 1; text-align: center; width: 100%; }
+        .h1 { order: 2; text-align: center; width: 100%; }
+        .hero-img-wrap { order: 3; width: 100%; }
+        .body-text { order: 4; width: 100%; }
+        .price-card { order: 5; width: 100%; }
+    }
     </style>
 </head>
 <body>
